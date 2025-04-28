@@ -6,10 +6,10 @@ import retrofit2.http.Path
 
 interface Api {
 
-    @GET("/info0.json")
+    @GET("/info.0.json")
     suspend fun getLatestComic(): ComicResponse
 
-    @GET("/{id}/info0.json")
+    @GET("/{id}/info.0.json")
     suspend fun getComicById(@Path("id") id: Int): ComicResponse
 
 }

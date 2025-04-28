@@ -7,8 +7,10 @@ import androidx.room.PrimaryKey
 data class Comic (
     @PrimaryKey val id: Int,
     val title: String,
-    val description: String,
-    val date: String,
-    val imageUrl: String,
+    val img: String,
+    val alt: String,
+    val year: String,
+    val day: String,
+    val month: String,
     val favorite: Boolean
 )

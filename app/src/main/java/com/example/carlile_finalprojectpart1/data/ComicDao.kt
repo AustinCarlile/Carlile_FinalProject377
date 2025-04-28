@@ -14,7 +14,7 @@ interface ComicDao {
     suspend fun insert(comic: Comic)
 
     @Query("SELECT * FROM favorite_comics WHERE favorite = true")
-    fun getFavoriteComics(): LiveData<Comic>
+    fun getFavoriteComics(): LiveData<List<Comic>>
 
     @Update
     suspend fun updateComic(comic: Comic)

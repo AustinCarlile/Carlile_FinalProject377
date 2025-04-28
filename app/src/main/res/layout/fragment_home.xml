@@ -52,6 +52,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/tv_comic_of_day"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="📌 Comic of the Day"
@@ -60,6 +61,7 @@
                 android:textColor="#222222" />
 
             <ImageView
+                android:id="@+id/iv_comic"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_marginTop="8dp"
@@ -68,6 +70,7 @@
                 android:contentDescription="Featured comic" />
 
             <TextView
+                android:id="@+id/tv_comic_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Comic #417 – Physics or Somethin'"
@@ -77,6 +80,7 @@
                 android:layout_marginTop="12dp" />
 
             <TextView
+                android:id="@+id/tv_comic_alt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="What goes up, must come down!"

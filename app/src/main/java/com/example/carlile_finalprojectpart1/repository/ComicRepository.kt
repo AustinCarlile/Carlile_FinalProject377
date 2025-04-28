@@ -1,5 +1,6 @@
 package com.example.carlile_finalprojectpart1.repository
 
+import com.example.carlile_finalprojectpart1.data.Comic
 import com.example.carlile_finalprojectpart1.data.ComicDao
 import com.example.carlile_finalprojectpart1.network.Client
 import com.example.carlile_finalprojectpart1.network.ComicResponse
@@ -14,4 +15,7 @@ class ComicRepository(private val comicDao: ComicDao) {
         return Client.apiService.getComicById(id)
     }
 
+    suspend fun insertComic(comic: Comic) {
+        comicDao.insert(comic)
+    }
 }

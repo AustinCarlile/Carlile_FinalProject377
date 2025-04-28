@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.carlile_finalprojectpart1.data.Comic
 import com.example.carlile_finalprojectpart1.network.ComicResponse
 import com.example.carlile_finalprojectpart1.repository.ComicRepository
 import kotlinx.coroutines.launch
@@ -12,15 +13,36 @@ import kotlinx.coroutines.launch
 class ComicViewModel(private val comicRepository: ComicRepository) : ViewModel() {
 
     private val _latestComicLiveData = MutableLiveData<ComicResponse>()
+    private val _specificComicLiveData = MutableLiveData<ComicResponse>()
     val latestComicLiveData: LiveData<ComicResponse> = _latestComicLiveData
+    val specificComic: LiveData<ComicResponse> = _specificComicLiveData
 
-    fun getLatestComic() {
+    suspend fun getLatestComicResponse(): ComicResponse? {
+        return try {
+            comicRepository.getLatestComic()
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    suspend fun getComicResponseById(id: Int): ComicResponse? {
+        return try {
+            comicRepository.getComicById(id)
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    fun addFavoriteComic(comic: Comic) {
         viewModelScope.launch {
-            try {
-                _latestComicLiveData.value = comicRepository.getLatestComic()
-            } catch (exception: Exception) {
-                Log.e("API Error", "Error fetching latest comic: ${exception.message}")
-            }
+            comicRepository.insertComic(comic)
         }
     }
 }
+
+
+
+
+
+
+
