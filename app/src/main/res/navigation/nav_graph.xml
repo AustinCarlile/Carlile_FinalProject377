@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.carlile_finalprojectpart1.ui.HomeFragment"
+        android:label="XKCD Viewer">
+
+        <action
+            android:id="@+id/action_home_to_browse"
+            app:destination="@id/BrowseFragment" />
+
+        <action
+            android:id="@+id/action_home_to_search"
+            app:destination="@id/SearchFragment" />
+
+        <action
+            android:id="@+id/action_home_to_favorites"
+            app:destination="@id/FavoritesFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/BrowseFragment"
+        android:name="com.example.carlile_finalprojectpart1.ui.BrowseFragment"
+        android:label="Browse">
+
+        <action
+            android:id="@+id/action_browse_to_home"
+            app:destination="@id/HomeFragment" />
+
+        <action
+            android:id="@+id/action_browse_to_search"
+            app:destination="@id/SearchFragment" />
+
+        <action
+            android:id="@+id/action_browse_to_favorites"
+            app:destination="@id/FavoritesFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:name="com.example.carlile_finalprojectpart1.ui.SearchFragment"
+        android:label="Search">
+
+        <action
+            android:id="@+id/action_search_to_home"
+            app:destination="@id/HomeFragment" />
+
+        <action
+            android:id="@+id/action_search_to_browse"
+            app:destination="@id/BrowseFragment" />
+
+        <action
+            android:id="@+id/action_search_to_favorites"
+            app:destination="@id/FavoritesFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FavoritesFragment"
+        android:name="com.example.carlile_finalprojectpart1.ui.FavoritesFragment"
+        android:label="Favorites">
+
+        <action
+            android:id="@+id/action_favorites_to_home"
+            app:destination="@id/HomeFragment" />
+
+        <action
+            android:id="@+id/action_favorites_to_browse"
+            app:destination="@id/BrowseFragment" />
+
+        <action
+            android:id="@+id/action_favorites_to_search"
+            app:destination="@id/SearchFragment" />
+
+    </fragment>
+
+</navigation>

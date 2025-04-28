@@ -1,0 +1,53 @@
+package com.example.carlile_finalprojectpart1.ui
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import coil3.load
+import com.example.carlile_finalprojectpart1.R
+import com.example.carlile_finalprojectpart1.data.ComicDatabaseInstance
+import com.example.carlile_finalprojectpart1.repository.ComicRepository
+import com.example.carlile_finalprojectpart1.viewmodel.ComicViewModel
+import com.example.carlile_finalprojectpart1.viewmodel.ComicViewModelFactory
+
+class HomeFragment : Fragment(R.layout.fragment_home) {
+
+    private lateinit var comicViewModel: ComicViewModel
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val application = requireActivity().application
+        val comicDatabase = ComicDatabaseInstance.getInstance(application)
+        val comicDao = comicDatabase.comicDao()
+        val comicRepository = ComicRepository(comicDao)
+        val comicViewModelFactory = ComicViewModelFactory(comicRepository)
+
+        comicViewModel = ViewModelProvider(
+            this,
+            comicViewModelFactory)[ComicViewModel::class.java]
+
+        return super.onCreateView(inflater, container, savedInstanceState)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val comicImageView = view.findViewById<ImageView>(R.id.latest_comic)
+
+        comicViewModel.latestComicLiveData.observe(viewLifecycleOwner) {
+            img -> comicImageView.load(img) {
+                placeholder(R.drawable.ic_launcher_background)
+                error(R.drawable.ic_launcher_background)
+            }
+        }
+    }
+
+
+}
