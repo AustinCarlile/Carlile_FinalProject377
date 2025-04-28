@@ -39,15 +39,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val comicImageView = view.findViewById<ImageView>(R.id.latest_comic)
+        // val comicImageView = view.findViewById<ImageView>(R.id.latest_comic)   latest_comic doesnt exist anymore
 
-        comicViewModel.latestComicLiveData.observe(viewLifecycleOwner) {
-            img -> comicImageView.load(img) {
-                placeholder(R.drawable.ic_launcher_background)
-                error(R.drawable.ic_launcher_background)
-            }
-        }
+        //comicViewModel.latestComicLiveData.observe(viewLifecycleOwner) {
+        //    img -> comicImageView.load(img) {
+        //        placeholder(R.drawable.ic_launcher_background)
+        //        error(R.drawable.ic_launcher_background)
+        //        }
+        //}
     }
-
-
 }

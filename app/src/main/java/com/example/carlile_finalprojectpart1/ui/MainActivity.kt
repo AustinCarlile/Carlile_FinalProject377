@@ -61,25 +61,25 @@ class MainActivity : AppCompatActivity() {
 
         navView.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.nav_home -> {
+                R.id.HomeFragment -> {
                     navController.navigate(R.id.action_home_to_browse)
                     navController.navigate(R.id.action_home_to_search)
                     navController.navigate(R.id.action_home_to_favorites)
                 }
 
-                R.id.nav_browse -> {
+                R.id.BrowseFragment -> {
                     navController.navigate(R.id.action_browse_to_home)
                     navController.navigate(R.id.action_browse_to_search)
                     navController.navigate(R.id.action_browse_to_favorites)
                 }
 
-                R.id.nav_search -> {
+                R.id.SearchFragment -> {
                     navController.navigate(R.id.action_search_to_home)
                     navController.navigate(R.id.action_search_to_browse)
                     navController.navigate(R.id.action_search_to_favorites)
                 }
 
-                R.id.nav_favorites -> {
+                R.id.FavoritesFragment -> {
                     navController.navigate(R.id.action_favorites_to_home)
                     navController.navigate(R.id.action_favorites_to_browse)
                     navController.navigate(R.id.action_favorites_to_search)
