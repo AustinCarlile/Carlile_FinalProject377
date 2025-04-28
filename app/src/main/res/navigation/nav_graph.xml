@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/HomeFragment"
         android:name="com.example.carlile_finalprojectpart1.ui.HomeFragment"
-        android:label="XKCD Viewer">
+        android:label="Home">
 
         <action
             android:id="@+id/action_home_to_browse"

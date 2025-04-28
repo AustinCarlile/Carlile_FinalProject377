@@ -90,4 +90,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment).navController
+        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
 }

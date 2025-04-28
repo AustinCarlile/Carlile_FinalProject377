@@ -1,17 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/latest_comic"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#FFFFFF">
 
     <TextView
-        android:id="@+id/attribution"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/attribution" />
+        android:id="@+id/tv_welcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome to the XKCD Comic Browser!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#222222"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Explore nerdy comics, laugh at science, and save your faves!"
+        android:textSize="16sp"
+        android:textColor="#444444"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_featured"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="12dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📌 Comic of the Day"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#222222" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/xkcd1_foreground"
+                android:contentDescription="Featured comic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comic #417 – Physics or Somethin'"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What goes up, must come down!"
+                android:textSize="14sp"
+                android:textColor="#696969"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_quote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="“The internet makes everything better. Except comic timing.” – XKCD"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
