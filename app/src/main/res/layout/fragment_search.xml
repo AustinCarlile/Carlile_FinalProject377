@@ -51,9 +51,9 @@
                 <ImageView
                     android:id="@+id/iv_comic"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="250dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_launcher_foreground"
+                    android:src="@drawable/ic_placeholder_comic_foreground" /> 
                     android:contentDescription="Comic thumbnail" />
 
                 <TextView
