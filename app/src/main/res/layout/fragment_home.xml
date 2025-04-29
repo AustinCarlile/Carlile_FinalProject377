@@ -55,7 +55,7 @@
                 android:id="@+id/tv_comic_of_day"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="📌 Comic of the Day"
+                android:text="Comic of the Day"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#222222" />

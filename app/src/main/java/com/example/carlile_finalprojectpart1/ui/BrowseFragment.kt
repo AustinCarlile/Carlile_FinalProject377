@@ -9,7 +9,6 @@ import androidx.annotation.OptIn
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.media3.common.util.Log
 import androidx.media3.common.util.UnstableApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -23,8 +22,10 @@ import kotlinx.coroutines.launch
 class BrowseFragment : Fragment() {
 
     private val viewModel: ComicViewModel by viewModels {
-       val comicDao = com.example.carlile_finalprojectpart1.data.ComicDatabase.getDatabase(requireContext()).comicDao()
-        ComicViewModelFactory(com.example.carlile_finalprojectpart1.repository.ComicRepository(comicDao))
+       val comicDao = com.example.carlile_finalprojectpart1
+           .data.ComicDatabase.getDatabase(requireContext()).comicDao()
+        ComicViewModelFactory(com.example.carlile_finalprojectpart1
+            .repository.ComicRepository(comicDao))
     }
 
     private lateinit var recyclerView: RecyclerView
@@ -60,10 +61,12 @@ class BrowseFragment : Fragment() {
         lifecycleScope.launch {
             val latestComicResponse = viewModel.getLatestComicResponse()
             if (latestComicResponse == null) {
-                Log.e("BrowseFragment", "Failed to fetch latest comic.")
+                android.util.Log.e("BrowseFragment", "Failed to fetch latest comic.")
                 return@launch
             }
-            Log.d("BrowseFragment", "Latest comic fetched: $latestComicResponse")
+            android.util.Log.d(
+                "BrowseFragment",
+                "Latest comic fetched: $latestComicResponse")
 
             val latestNum = latestComicResponse?.num ?: return@launch
             val startNum = (latestNum - 9).coerceAtLeast(1)
