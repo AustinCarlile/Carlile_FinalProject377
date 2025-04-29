@@ -12,9 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import coil3.load
-import coil3.request.placeholder
-import coil3.request.error
+import coil.load
 import com.example.carlile_finalprojectpart1.R
 import com.example.carlile_finalprojectpart1.data.ComicDatabaseInstance
 import com.example.carlile_finalprojectpart1.repository.ComicRepository
@@ -55,9 +53,13 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // ✨ Show initial welcome message
+        resetComicViews()
+
         searchEditText.setOnEditorActionListener { _, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH ||
-                (event?.keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN)) {
+                (event?.keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN)
+            ) {
                 performSearch()
                 true
             } else {
@@ -67,7 +69,7 @@ class SearchFragment : Fragment() {
     }
 
     private fun performSearch() {
-        val query = searchEditText.text.toString()
+        val query = searchEditText.text.toString().trim()
 
         if (query.isNotEmpty()) {
             val comicNumber = query.toIntOrNull()
@@ -79,12 +81,15 @@ class SearchFragment : Fragment() {
                     if (comicResponse != null) {
                         comicImageView.load(comicResponse.img) {
                             placeholder(R.drawable.ic_launcher_foreground)
-                            error(R.drawable.ic_launcher_foreground)
+                            error(R.drawable.ic_no_comic_available)
+                            crossfade(true)
                         }
+
                         comicTitleTextView.text = "Comic #${comicResponse.num} – ${comicResponse.title}"
                         comicAltTextView.text = comicResponse.alt
                     } else {
                         Toast.makeText(requireContext(), "Comic not found!", Toast.LENGTH_SHORT).show()
+                        resetComicViews()
                     }
                 }
             } else {
@@ -92,6 +97,11 @@ class SearchFragment : Fragment() {
             }
         }
     }
+
+    private fun resetComicViews() {
+        comicImageView.setImageDrawable(null) // No image shown
+        comicTitleTextView.text = "" // No title yet
+        comicAltTextView.text = "Find your favorite XKCD comic here!" // Welcome message
+    }
+
 }
-
-
