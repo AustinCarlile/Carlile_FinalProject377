@@ -38,6 +38,16 @@ class ComicViewModel(private val comicRepository: ComicRepository) : ViewModel()
             comicRepository.insertComic(comic)
         }
     }
+
+    fun removeFavoriteComic(comic: Comic) {
+        viewModelScope.launch {
+            comicRepository.deleteComic(comic)
+        }
+    }
+
+    fun getFavoriteComics(): LiveData<List<Comic>> {
+        return comicRepository.getFavoriteComics()
+    }
 }
 
 

@@ -25,7 +25,7 @@ fun ComicResponse.toComic(): Comic {
         day = this.day,
         month = this.month,
         year = this.year,
-        favorite = false
+        favorite = true
     )
 }
 
