@@ -53,7 +53,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/ic_placeholder_comic_foreground" /> 
+                    android:src="@drawable/ic_placeholder_comic_foreground"
                     android:contentDescription="Comic thumbnail" />
 
                 <TextView
@@ -74,6 +74,16 @@
                     android:textSize="14sp"
                     android:textColor="#696969"
                     android:layout_marginTop="4dp" />
+
+                <Button
+                    android:id="@+id/btn_favorite_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Favorite" />
+
+
+
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
