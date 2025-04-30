@@ -31,6 +31,7 @@ class SearchFragment : Fragment() {
     private lateinit var comicTitleTextView: TextView
     private lateinit var comicAltTextView: TextView
     private lateinit var favoriteButton: Button
+    private lateinit var cardSearchResult: View
 
     private var latestSearchedComicResponse: ComicResponse? = null
 
@@ -51,6 +52,7 @@ class SearchFragment : Fragment() {
         comicTitleTextView = view.findViewById(R.id.tv_comic_title)
         comicAltTextView = view.findViewById(R.id.tv_comic_alt)
         favoriteButton = view.findViewById(R.id.btn_favorite_item)
+        cardSearchResult = view.findViewById(R.id.card_search_result)
 
         return view
     }
@@ -81,7 +83,6 @@ class SearchFragment : Fragment() {
 
     private fun performSearch() {
         val query = searchEditText.text.toString().trim()
-
         if (query.isNotEmpty()) {
             val comicNumber = query.toIntOrNull()
 
@@ -91,6 +92,7 @@ class SearchFragment : Fragment() {
 
                     if (comicResponse != null) {
                         latestSearchedComicResponse = comicResponse
+                        cardSearchResult.visibility = View.VISIBLE
 
                         comicImageView.load(comicResponse.img) {
                             placeholder(R.drawable.ic_launcher_foreground)
@@ -114,8 +116,9 @@ class SearchFragment : Fragment() {
     private fun resetComicViews() {
         comicImageView.setImageDrawable(null)
         comicTitleTextView.text = ""
-        comicAltTextView.text = "Find your favorite XKCD comic here!"
+        comicAltTextView.text = ""
         latestSearchedComicResponse = null
+        cardSearchResult.visibility = View.GONE
     }
 }
 
