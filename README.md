@@ -38,7 +38,20 @@ This Android app was developed as a final project for CS 377. It serves as a com
 
 3. Sync Gradle and build the project.
 
-4. Run the app on an emulator or physical device.
+### Functionality
+
+Opening the app will bring you to the home page with the latest XKCD comic.
+Selecting the hamburger menu in the top left will allow you to switch between pages.
+
+Home- Allows you to view the most recent XKCD comic as a comic of the day.
+
+Browse- See the top ten most recent comics and favorite them if wanted.
+
+Search- Search by comic ID and favorite comics if wanted.
+
+Favorites- See your favorited comics and unfavorite if wanted.
+
+5. Run the app on an emulator or physical device.
 
 
 
