@@ -33,11 +33,12 @@ This Android app was developed as a final project for CS 377. It serves as a com
 
 git clone https://github.com/AustinCarlile/Carlile_FinalProject377.git
 
-Open the project in Android Studio.
 
-Sync Gradle and build the project.
+2. Open the project in Android Studio.
 
-Run the app on an emulator or physical device.
+3. Sync Gradle and build the project.
+
+4. Run the app on an emulator or physical device.
 
 ### License
 This project is open source and available under the MIT License.
