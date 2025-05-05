@@ -40,8 +40,7 @@ This Android app was developed as a final project for CS 377. It serves as a com
 
 4. Run the app on an emulator or physical device.
 
-### License
-This project is open source and available under the MIT License.
+
 
 
 
