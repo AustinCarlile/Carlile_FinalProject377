@@ -37,6 +37,8 @@ This Android app was developed as a final project for CS 377. It serves as a com
 2. Open the project in Android Studio.
 
 3. Sync Gradle and build the project.
+4. Run the app on an emulator or physical device.
+
 
 ### Functionality
 
@@ -51,7 +53,6 @@ Search- Search by comic ID and favorite comics if wanted.
 
 Favorites- See your favorited comics and unfavorite if wanted.
 
-5. Run the app on an emulator or physical device.
 
 
 
