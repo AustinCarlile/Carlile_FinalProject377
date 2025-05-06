@@ -20,25 +20,28 @@ import com.example.carlile_finalprojectpart1.viewmodel.ComicViewModelFactory
 import kotlinx.coroutines.launch
 
 class BrowseFragment : Fragment() {
-
+    // Initialize the ComicViewModel using the ComicViewModelFactory
     private val viewModel: ComicViewModel by viewModels {
        val comicDao = com.example.carlile_finalprojectpart1
            .data.ComicDatabase.getDatabase(requireContext()).comicDao()
         ComicViewModelFactory(com.example.carlile_finalprojectpart1
             .repository.ComicRepository(comicDao))
     }
-
+    // Declare the RecyclerView and adapter
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: BrowseAdapter
-
+    // Create a list of comics
     private val comics = mutableListOf<Comic>()
 
+    // Inflate the layout for this fragment
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_browse, container, false)
 
+        // Initialize the RecyclerView and adapter
         recyclerView = view.findViewById(R.id.rv_browse)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         adapter = BrowseAdapter(comics) { comic ->
@@ -58,6 +61,7 @@ class BrowseFragment : Fragment() {
 
     @OptIn(UnstableApi::class)
     private fun loadLatestComics() {
+        // Fetch the latest comic and add it to the list
         lifecycleScope.launch {
             val latestComicResponse = viewModel.getLatestComicResponse()
             if (latestComicResponse == null) {
@@ -71,6 +75,7 @@ class BrowseFragment : Fragment() {
             val latestNum = latestComicResponse.num
             val startNum = (latestNum - 9).coerceAtLeast(1)
 
+            // Fetch the comics from the start number to the latest number
             for (i in latestNum downTo startNum) {
                 val comicResponse = viewModel.getComicResponseById(i)
                 comicResponse?.let { response ->

@@ -5,9 +5,12 @@ import androidx.room.Room
 
 object ComicDatabaseInstance {
 
+    // Singleton instance of the database
     private var databaseInstance: ComicDatabase? = null
 
+    // Get the database instance
     fun getInstance(context: Context): ComicDatabase {
+        // If the database instance is null, create a new instance
         if (databaseInstance == null) {
             databaseInstance = Room.databaseBuilder(
                 context.applicationContext,
