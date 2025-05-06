@@ -1,5 +1,6 @@
 package com.example.carlile_finalprojectpart1.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +29,7 @@ class BrowseAdapter(
         return ComicViewHolder(view)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ComicViewHolder, position: Int) {
         val comic = comics[position]
 

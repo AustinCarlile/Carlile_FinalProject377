@@ -9,7 +9,7 @@ data class ComicResponse(
     val link: String,
     val year: String,
     val news: String,
-    val safe_title: String,
+    val safeTitle: String,
     val transcript: String,
     val alt: String,
     val img: String,

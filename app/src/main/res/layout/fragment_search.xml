@@ -16,7 +16,7 @@
             android:id="@+id/et_search_query"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Search by Comic Number 🔍"
+            android:hint="@string/search_by_number_hint"
             android:drawableStart="@android:drawable/ic_menu_search"
             android:padding="12dp"
             android:background="@android:drawable/editbox_background_normal"
@@ -26,7 +26,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search Results"
+            android:text="@string/search_results"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginTop="24dp"
@@ -55,13 +55,13 @@
                     android:layout_height="250dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_placeholder_comic_foreground"
-                    android:contentDescription="Comic thumbnail" />
+                    android:contentDescription="@string/content_description_thumbnail" />
 
                 <TextView
                     android:id="@+id/tv_comic_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Comic Title"
+                    android:text="@string/comic_title"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#000000"
@@ -71,7 +71,7 @@
                     android:id="@+id/tv_comic_alt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Comic Alt Text"
+                    android:text="@string/comic_alt_text"
                     android:textSize="14sp"
                     android:textColor="#696969"
                     android:layout_marginTop="4dp" />
@@ -80,11 +80,9 @@
                     android:id="@+id/btn_favorite_item"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="Favorite" />
-
-
-
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/favorite_text" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

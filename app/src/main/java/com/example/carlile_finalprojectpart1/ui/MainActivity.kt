@@ -1,7 +1,6 @@
 package com.example.carlile_finalprojectpart1.ui
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout

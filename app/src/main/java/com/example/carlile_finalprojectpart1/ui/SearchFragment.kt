@@ -1,5 +1,6 @@
 package com.example.carlile_finalprojectpart1.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.LayoutInflater
@@ -81,6 +82,7 @@ class SearchFragment : Fragment() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun performSearch() {
         val query = searchEditText.text.toString().trim()
         if (query.isNotEmpty()) {

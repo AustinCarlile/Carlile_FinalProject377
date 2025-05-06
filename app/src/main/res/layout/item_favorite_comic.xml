@@ -18,6 +18,7 @@
             android:id="@+id/iv_comic_item"
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:contentDescription="@string/content_description_image"
             android:scaleType="fitCenter" />
 
         <TextView
@@ -27,14 +28,15 @@
             android:layout_marginTop="8dp"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:text="Comic Title" />
+            android:text="@string/comic_title" />
 
         <Button
             android:id="@+id/btn_unfavorite_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Unfavorite" />
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/unfavorite_text" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
 

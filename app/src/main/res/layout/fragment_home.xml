@@ -58,9 +58,9 @@
                     android:id="@+id/tv_comic_alt_home"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Comic Alt Text"
+                    android:text="@string/comic_alt_text"
                     android:textSize="14sp"
-                    android:textColor="#666666"
+                    android:textColor="#696969"
                     android:layout_marginTop="8dp"
                     android:padding="8dp"
                     android:lineSpacingExtra="4dp"/>

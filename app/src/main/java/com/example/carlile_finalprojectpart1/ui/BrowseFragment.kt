@@ -68,7 +68,7 @@ class BrowseFragment : Fragment() {
                 "BrowseFragment",
                 "Latest comic fetched: $latestComicResponse")
 
-            val latestNum = latestComicResponse?.num ?: return@launch
+            val latestNum = latestComicResponse.num
             val startNum = (latestNum - 9).coerceAtLeast(1)
 
             for (i in latestNum downTo startNum) {

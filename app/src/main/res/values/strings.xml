@@ -6,5 +6,13 @@
     <string name="favorites_item_name">Favorites</string>
     <string name="browse_item_name">Browse</string>
     <string name="search_item_name">Search</string>
+    <string name="favorite_text">Favorite</string>
+    <string name="unfavorite_text">Unfavorite</string>
+    <string name="comic_title">Comic Title</string>
+    <string name="content_description_image">Comic Image</string>
+    <string name="content_description_thumbnail">Comic Thumbnail</string>
+    <string name="comic_alt_text">Comic Alt Text</string>
+    <string name="search_results">Search Results</string>
+    <string name="search_by_number_hint">Search by Comic Number 🔍</string>
     <string name="attribution">All comics from xkcd.com\nFree to use with attribution.</string>
 </resources>
