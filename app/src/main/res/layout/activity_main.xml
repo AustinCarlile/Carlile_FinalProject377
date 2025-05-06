@@ -19,12 +19,13 @@
             android:layout_height="match_parent"
             app:defaultNavHost="true"
             app:navGraph="@navigation/nav_graph"
-            tools:layout="@layout/activity_main" />
+            tools:layout="@layout/item_comic" />
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:paddingTop="10dp"
             android:background="@color/material_dynamic_primary30"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             />
