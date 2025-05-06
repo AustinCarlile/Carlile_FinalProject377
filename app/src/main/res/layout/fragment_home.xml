@@ -9,13 +9,14 @@
     <LinearLayout
         android:orientation="vertical"
         android:padding="60dp"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to XKCD!"
+            android:text="@string/welcome_text"
             android:textSize="22sp"
             android:textStyle="bold"
             android:layout_gravity="center"
@@ -42,13 +43,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:scaleType="centerCrop"
-                    android:contentDescription="Latest comic image" />
+                    android:contentDescription="@string/content_description_image_latest" />
 
                 <TextView
                     android:id="@+id/tv_comic_title_home"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Comic Title"
+                    android:text="@string/comic_title"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:textColor="#000000"
@@ -67,6 +68,18 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/attribution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/attribution"
+            android:textSize="14sp"
+            android:textColor="#696969"
+            android:layout_marginTop="200dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="8dp"
+            android:lineSpacingExtra="4dp"/>
 
     </LinearLayout>
 </ScrollView>
