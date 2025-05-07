@@ -36,9 +36,18 @@ This Android app was developed as a final project for CS 377. It serves as a com
 ```
 
 2. Open the project in Android Studio.
+   
+![image](https://github.com/user-attachments/assets/8e50a4a5-c177-4059-9de7-1e07853a0e2e)
 
-3. Sync Gradle and build the project.
-4. Run the app on an emulator or physical device.
+![image](https://github.com/user-attachments/assets/937d511d-85c3-4040-84e9-bbb787887872)
+
+4. Sync Gradle and build the project.
+   
+![image](https://github.com/user-attachments/assets/ff2819cf-e558-4dd2-808e-4b8c6e3c19fc)
+
+6. Run the app on an emulator or physical device.
+   
+![image](https://github.com/user-attachments/assets/5dc6f9d9-de53-4be6-b946-0a15c3d9b008)
 
 
 ### Functionality
