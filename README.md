@@ -39,7 +39,8 @@ This Android app was developed as a final project for CS 377. It serves as a com
    
 ![image](https://github.com/user-attachments/assets/8e50a4a5-c177-4059-9de7-1e07853a0e2e)
 
-![image](https://github.com/user-attachments/assets/937d511d-85c3-4040-84e9-bbb787887872)
+![image](https://github.com/user-attachments/assets/154ddc66-2299-4796-a3be-0b4f47b6a63b)
+
 
 4. Sync Gradle and build the project.
    
