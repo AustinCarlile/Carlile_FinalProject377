@@ -45,6 +45,7 @@
                     android:scaleType="centerCrop"
                     android:contentDescription="@string/content_description_image_latest" />
 
+                <!--Title Text View-->
                 <TextView
                     android:id="@+id/tv_comic_title_home"
                     android:layout_width="wrap_content"
@@ -55,6 +56,7 @@
                     android:textColor="#000000"
                     android:layout_marginTop="12dp" />
 
+                <!--Alt Text View-->
                 <TextView
                     android:id="@+id/tv_comic_alt_home"
                     android:layout_width="wrap_content"
@@ -69,6 +71,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <!--Attribution Message-->
         <TextView
             android:id="@+id/attribution"
             android:layout_width="wrap_content"
