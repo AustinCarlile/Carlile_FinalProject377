@@ -54,11 +54,25 @@ Search- Search by comic ID and favorite comics if wanted.
 
 Favorites- See your favorited comics and unfavorite if wanted.
 
+
+### Troubleshooting
+
+If no comics are being displayed and all comic information is showing up as placeholder values, here are some possible Solutions:
+
+* Check Android Studio for updates and update if available.
+* Make sure that your device or emulator has an internet connection.
+* Check www.xkcd.com to make sure that the website is up.
+* Test specific API functionality:
+   - Check https://xkcd.com/info.0.json for the latest comic for a correct HTTP Response.
+   - Check https://xkcd.com/{id_num}/info.0.json for a specic comic for a correct HTTP Response.
+* Rebuild the project.
+* Delete and reclone the project.
+
 ### Contribution Guidelines
 
 If any code is added or changed by any user other than AustinC, Cole2303 and noschwa:
 
-Leave a comment with your github username, detailing what code you added or changed
+Leave a comment with your github username, detailing what code you added or changed.
 
 
 
