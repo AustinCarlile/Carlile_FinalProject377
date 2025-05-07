@@ -113,7 +113,7 @@ class SearchFragment : Fragment() {
 
                         // Load the comic image using Coil
                         comicImageView.load(comicResponse.img) {
-                            placeholder(R.drawable.ic_launcher_foreground)
+                            placeholder(R.drawable.xkcd1_foreground)
                             error(R.drawable.ic_no_comic_available)
                             crossfade(true)
                         }
