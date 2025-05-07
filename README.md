@@ -54,7 +54,11 @@ Search- Search by comic ID and favorite comics if wanted.
 
 Favorites- See your favorited comics and unfavorite if wanted.
 
+### Contribution Guidelines
 
+If any code is added or changed by any user other than AustinC, Cole2303 and noschwa:
+
+Leave a comment with your github username, detailing what code you added or changed
 
 
 
