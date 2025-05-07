@@ -63,8 +63,8 @@ If no comics are being displayed and all comic information is showing up as plac
 * Make sure that your device or emulator has an internet connection.
 * Check www.xkcd.com to make sure that the website is up.
 * Test specific API functionality:
-   - Check https://xkcd.com/info.0.json for the latest comic for a correct HTTP Response.
-   - Check https://xkcd.com/{id_num}/info.0.json for a specic comic for a correct HTTP Response.
+   - Check https://xkcd.com/info.0.json for a correct HTTP Response with the latest comic.
+   - Check https://xkcd.com/{id_num}/info.0.json (replace id_num) for a correct HTTP Response with a specific comic by ID.
 * Rebuild the project.
 * Delete and reclone the project.
 
