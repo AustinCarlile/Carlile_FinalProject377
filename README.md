@@ -31,8 +31,9 @@ This Android app was developed as a final project for CS 377. It serves as a com
 
 1. Clone the repo:
 
+```
    git clone https://github.com/AustinCarlile/Carlile_FinalProject377.git
-
+```
 
 2. Open the project in Android Studio.
 
