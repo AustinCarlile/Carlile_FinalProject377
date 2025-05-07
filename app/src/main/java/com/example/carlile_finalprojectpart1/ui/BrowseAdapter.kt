@@ -37,6 +37,7 @@ class BrowseAdapter(
     // bind data to the ViewHolder
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ComicViewHolder, position: Int) {
+
         // get the comic at the current position
         val comic = comics[position]
 

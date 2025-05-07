@@ -1,22 +1,22 @@
 <resources>
     <string name="app_name">Carlile_FinalProjectPart1</string>
-    <string name="open_drawer">Open Drawer</string>
-    <string name="close_drawer">Close Drawer</string>
-    <string name="home_item_name">Home</string>
-    <string name="favorites_item_name">Favorites</string>
+    <string name="attribution">All comics from xkcd.com\nFree to use with attribution.</string>
     <string name="browse_item_name">Browse</string>
-    <string name="search_item_name">Search</string>
-    <string name="favorite_text">Favorite</string>
-    <string name="unfavorite_text">Unfavorite</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="comic_alt_text">Comic Alt Text</string>
     <string name="comic_title">Comic Title</string>
+    <string name="content_description_browse">List of All Comics</string>
+    <string name="content_description_favorites">List of Favorited Comics</string>
     <string name="content_description_image">Comic Image</string>
     <string name="content_description_image_latest">Latest Comic Image</string>
     <string name="content_description_thumbnail">Comic Thumbnail</string>
-    <string name="content_description_favorites">List of Favorited Comics</string>
-    <string name="content_description_browse">List of All Comics</string>
-    <string name="comic_alt_text">Comic Alt Text</string>
-    <string name="search_results">Search Results:</string>
-    <string name="welcome_text">Welcome to XKCD!</string>
+    <string name="favorites_item_name">Favorites</string>
+    <string name="favorite_text">Favorite</string>
+    <string name="home_item_name">Home</string>
+    <string name="open_drawer">Open Drawer</string>
     <string name="search_by_number_hint">Search by Comic Number 🔍</string>
-    <string name="attribution">All comics from xkcd.com\nFree to use with attribution.</string>
+    <string name="search_item_name">Search</string>
+    <string name="search_results">Search Results:</string>
+    <string name="unfavorite_text">Unfavorite</string>
+    <string name="welcome_text">Welcome to XKCD!</string>
 </resources>

@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.carlile_finalprojectpart1.repository.ComicRepository
 
+// ViewModelFactory for creating ComicViewModel objects
 @Suppress("UNCHECKED_CAST")
 class ComicViewModelFactory(private val comicRepository: ComicRepository) :
     ViewModelProvider.Factory {

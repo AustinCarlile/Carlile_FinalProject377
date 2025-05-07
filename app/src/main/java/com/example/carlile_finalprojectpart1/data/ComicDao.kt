@@ -20,6 +20,7 @@ interface ComicDao {
     @Query("SELECT * FROM favorite_comics WHERE favorite = true")
     fun getFavoriteComics(): LiveData<List<Comic>>
 
+    // Updates a comic in the database
     @Update
     suspend fun updateComic(comic: Comic)
 

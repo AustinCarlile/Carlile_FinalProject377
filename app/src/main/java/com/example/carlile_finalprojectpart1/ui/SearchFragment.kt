@@ -83,8 +83,14 @@ class SearchFragment : Fragment() {
         favoriteButton.setOnClickListener {
             latestSearchedComicResponse?.let {
                 comicViewModel.addFavoriteComic(it.toComic())
-                Toast.makeText(requireContext(), "Comic favorited!", Toast.LENGTH_SHORT).show()
-            } ?: Toast.makeText(requireContext(), "Search a comic first!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    requireContext(),
+                    "Comic favorited!",
+                    Toast.LENGTH_SHORT).show()
+            } ?: Toast.makeText(
+                requireContext(),
+                "Search a comic first!",
+                Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -113,15 +119,22 @@ class SearchFragment : Fragment() {
                         }
 
                         // Update the comic title and alt text
-                        comicTitleTextView.text = "Comic #${comicResponse.num} – ${comicResponse.title}"
+                        comicTitleTextView.text =
+                            "Comic #${comicResponse.num} – ${comicResponse.title}"
                         comicAltTextView.text = comicResponse.alt
-                    } else {
-                        Toast.makeText(requireContext(), "Comic not found!", Toast.LENGTH_SHORT).show()
+                    } else { // else, comic is not found
+                        Toast.makeText(
+                            requireContext(),
+                            "Comic not found!",
+                            Toast.LENGTH_SHORT).show()
                         resetComicViews()
                     }
                 }
-            } else {
-                Toast.makeText(requireContext(), "Please enter a valid number!", Toast.LENGTH_SHORT).show()
+            } else { // else, search is not a valid number
+                Toast.makeText(
+                    requireContext(),
+                    "Please enter a valid number!",
+                    Toast.LENGTH_SHORT).show()
             }
         }
     }

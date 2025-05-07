@@ -10,8 +10,11 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.example.carlile_finalprojectpart1.R
 import com.google.android.material.navigation.NavigationView
+
 // MainActivity is the main activity of the app
 class MainActivity : AppCompatActivity() {
+
+    // Declare variables
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navController: NavController
     private lateinit var navView: NavigationView
@@ -66,8 +69,10 @@ class MainActivity : AppCompatActivity() {
 
     // Handle the back button press
     override fun onSupportNavigateUp(): Boolean {
-        val navController = (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment).navController
-        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp()
+        val navController = (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as
+                NavHostFragment).navController
+        return NavigationUI.navigateUp(navController, appBarConfiguration) ||
+                super.onSupportNavigateUp()
     }
 
 }

@@ -24,28 +24,34 @@ class FavoritesAdapter(
         val comicTitleTextView: TextView = itemView.findViewById(R.id.tv_comic_title_item)
         val unfavoriteButton: Button = itemView.findViewById(R.id.btn_unfavorite_item)
     }
+
     // inflate the item layout and return a ViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteComicViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_favorite_comic, parent, false)
         return FavoriteComicViewHolder(view)
     }
+
     // bind data to the ViewHolder
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: FavoriteComicViewHolder, position: Int) {
         val comic = favorites[position]
+
         // set the text and image of the ViewHolder
         holder.comicTitleTextView.text = "Comic #${comic.id} - ${comic.title}"
+
         // load the image using Glide
         Glide.with(holder.itemView.context)
             .load(comic.img)
             .placeholder(R.drawable.xkcd1_foreground)
             .into(holder.comicImageView)
+
         // set the click listener for unfavoriting the comic
         holder.unfavoriteButton.setOnClickListener {
             onUnfavoriteClick(comic)
         }
     }
+
     // get item count for recycler view
     override fun getItemCount(): Int = favorites.size
 }

@@ -10,6 +10,7 @@ object ComicDatabaseInstance {
 
     // Get the database instance
     fun getInstance(context: Context): ComicDatabase {
+
         // If the database instance is null, create a new instance
         if (databaseInstance == null) {
             databaseInstance = Room.databaseBuilder(

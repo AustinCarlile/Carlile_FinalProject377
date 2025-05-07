@@ -14,6 +14,7 @@ abstract class ComicDatabase : RoomDatabase() {
 
     // Companion object to get the database
     companion object {
+
         @Volatile
         // Singleton instance of the database
         private var INSTANCE: ComicDatabase? = null

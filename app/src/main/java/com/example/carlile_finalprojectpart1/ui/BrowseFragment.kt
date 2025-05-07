@@ -19,7 +19,9 @@ import com.example.carlile_finalprojectpart1.viewmodel.ComicViewModel
 import com.example.carlile_finalprojectpart1.viewmodel.ComicViewModelFactory
 import kotlinx.coroutines.launch
 
+// Fragment class that displays a RecyclerView of comics starting from the latest comic
 class BrowseFragment : Fragment() {
+
     // Initialize the ComicViewModel using the ComicViewModelFactory
     private val viewModel: ComicViewModel by viewModels {
        val comicDao = com.example.carlile_finalprojectpart1
@@ -27,9 +29,11 @@ class BrowseFragment : Fragment() {
         ComicViewModelFactory(com.example.carlile_finalprojectpart1
             .repository.ComicRepository(comicDao))
     }
+
     // Declare the RecyclerView and adapter
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: BrowseAdapter
+
     // Create a list of comics
     private val comics = mutableListOf<Comic>()
 
@@ -38,6 +42,7 @@ class BrowseFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_browse, container, false)
 
@@ -53,6 +58,7 @@ class BrowseFragment : Fragment() {
         return view
     }
 
+    // Load latest comics
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -61,6 +67,7 @@ class BrowseFragment : Fragment() {
 
     @OptIn(UnstableApi::class)
     private fun loadLatestComics() {
+
         // Fetch the latest comic and add it to the list
         lifecycleScope.launch {
             val latestComicResponse = viewModel.getLatestComicResponse()
